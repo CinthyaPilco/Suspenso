@@ -1,22 +1,3 @@
-//https://www.eclipse.org/paho/clients/js/
-
-function LED1_On() {
-	alert("led on");
-	console.log("led on");
-	document.getElementById("sensor").innerHTML="led on";
-  
-}
-function LED1_Off(){	
-	alert("led off");
-	console.log("led off");
-	document.getElementById("sensor").innerHTML="led off";
-}
-
-
-
-
-
-
 // Create a client instance
   //client = new Paho.MQTT.Client("postman.cloudmqtt.com", 14970);
   
@@ -27,8 +8,8 @@ function LED1_Off(){
   client.onMessageArrived = onMessageArrived;
   var options = {
    useSSL: false,
-    userName: "lfrenteriax@hotmail.com",
-    password: "lfrenteriax",
+    userName: "cinthyaanabel14@gmail.com",
+    password: "embebidos1",
     onSuccess:onConnect,
     onFailure:doFail
   }
@@ -41,9 +22,9 @@ function LED1_Off(){
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
 	
-    client.subscribe("lfrenteriax@hotmail.com/test");
+    client.subscribe("cinthyaanabel14@gmail.com/servidor");
     message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "lfrenteriax@hotmail.com/test1";
+    message.destinationName = "cinthyaanabel14@gmail.com/raspberry";
     client.send(message);
 	
   }
@@ -62,6 +43,17 @@ function LED1_Off(){
 
   // called when a message arrives
   function onMessageArrived(message) {
-    console.log("onMessageArrived:"+message.payloadString);
+	console.log(message.payloadString);
+	Ident=(message.payloadString).split(" ")[0];
+	datos=(message.payloadString).split(" ")[1];
+	if (Ident== "s1"){
+		document.getElementById("contra").innerHTML=datos;
+		}
+	if (Ident== "s2"){
+		document.getElementById("contra").innerHTML=datos;
+		}
+	if (Ident== "h"){
+		document.getElementById("contra").innerHTML=datos;
+		}
   }
   
