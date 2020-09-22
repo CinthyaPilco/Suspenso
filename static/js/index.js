@@ -58,7 +58,7 @@
 		document.getElementById("sensor2").innerHTML=datos;
 		}
 	if (Ident== "H"){
-		document.getElementById("istorial").innerHTML=datos;
+		document.getElementById("historial").innerHTML=datos;
 		}
   }
   
