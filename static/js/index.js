@@ -1,6 +1,11 @@
 // Create a client instance
   //client = new Paho.MQTT.Client("postman.cloudmqtt.com", 14970);
   
+  function hist1(){
+	message = new Paho.MQTT.Message("historial 1");
+    message.destinationName = "cinthyaanabel14@gmail.com/raspberry";
+    client.send(message);
+	  }
   client = new Paho.MQTT.Client("maqiatto.com", 8883, "web_" + parseInt(Math.random() * 100, 10));
 
   // set callback handlers
