@@ -51,13 +51,13 @@
 	console.log(message.payloadString);
 	Ident=(message.payloadString).split(" ")[0];
 	datos=(message.payloadString).split(" ")[1];
-	if (Ident== "s1"){
+	if (Ident== "S1"){
 		document.getElementById("contra").innerHTML=datos;
 		}
-	if (Ident== "s2"){
+	if (Ident== "S2"){
 		document.getElementById("contra").innerHTML=datos;
 		}
-	if (Ident== "h"){
+	if (Ident== "H"){
 		document.getElementById("contra").innerHTML=datos;
 		}
   }
