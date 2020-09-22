@@ -52,13 +52,13 @@
 	Ident=(message.payloadString).split(" ")[0];
 	datos=(message.payloadString).split(" ")[1];
 	if (Ident== "S1"){
-		document.getElementById("contra").innerHTML=datos;
+		document.getElementById("sensor1").innerHTML=datos;
 		}
 	if (Ident== "S2"){
-		document.getElementById("contra").innerHTML=datos;
+		document.getElementById("sensor2").innerHTML=datos;
 		}
 	if (Ident== "H"){
-		document.getElementById("contra").innerHTML=datos;
+		document.getElementById("istorial").innerHTML=datos;
 		}
   }
   
