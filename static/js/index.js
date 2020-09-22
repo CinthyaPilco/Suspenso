@@ -51,6 +51,7 @@
 	console.log(message.payloadString);
 	Ident=(message.payloadString).split(" ")[0];
 	datos=(message.payloadString).split(" ")[1];
+	fecha=(message.payloadString)
 	if (Ident== "S1"){
 		document.getElementById("sensor1").innerHTML=datos;
 		}
@@ -58,7 +59,7 @@
 		document.getElementById("sensor2").innerHTML=datos;
 		}
 	if (Ident== "H"){
-		document.getElementById("historial").innerHTML=datos;
+		document.getElementById("historial").innerHTML=fecha;
 		}
   }
   
